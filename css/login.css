@@ -1,0 +1,147 @@
+
+#logincontain{
+    position:absolute;
+    top:150px;
+    left: 550px;
+    background-color: white;
+    justify-content:center;
+}
+#logincontain>button{
+    position:absolute;
+    left:770px;
+    top:10px;
+    cursor: pointer;
+    color: rgba(130, 124, 124, 0.895);
+    padding: 1px 10px;
+}
+#containerL{
+    width:800px;
+    padding: 20px;
+    display: flex;
+    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+    background-color: white;
+    /* justify-content: center; */
+    /* margin-right:100px; */
+}
+li{
+    display: flex;
+    
+}
+li>img{
+    margin-right: 20px;
+    margin-top:-45px;
+}
+li>div>h4{
+    margin-top:5px;
+    font-size: 18px;
+}
+li>div>h4+div{
+    margin-left:0px;
+}
+#trade{
+    margin-top:20px;
+    display: flex;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.103);
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+#trade>img{
+    width:30px;
+    height: 30px;
+}
+#list1,#list2{
+    width:400px;
+    margin-left:-10px;
+    margin-right:10px;
+ 
+}
+#list1>div>h3{
+    margin-left:30px;
+    font-size: 22px;
+}
+#trade>div>p{
+    color: rgba(8, 19, 29, 0.866);
+    font-size: 16px;
+    margin-bottom: 0px;
+    font-family: sans-serif;
+}
+#logo{
+    height: 290px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-left:0px;
+    margin-top:20px;
+}
+#logo>div{
+    cursor:pointer;
+     text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+#logo+div{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    
+    justify-content: center;
+}
+.div1{
+    height: 1px;
+    width:30px;
+    background-color: rgba(0, 0, 0, 0.322);
+}
+.div2{
+    width:220px;
+    margin-top:-12px;
+    
+    text-align: center;
+}
+#logo+div+button{
+    width:330px;
+    height: 40px;
+    cursor: pointer;
+    margin-bottom: 30px;
+    margin-left:30px;
+    font-size: 16px;
+    border-color: rgba(0, 0, 255, 0.363);
+    color: blue;
+    background-color: white;
+    font-family: sans-serif;
+    
+}
+#befor>div::before{
+    content: " . . . .";
+    font-size: 20px;
+    margin-left:10px;
+    
+    
+}
+#befor>div{
+    margin-bottom: -20px;
+    color: rgba(0, 0, 0, 0.37);
+    margin-left: 300px;
+    margin-top:5px;
+    /* margin-bottom: -20px; */
+
+}
+#after>div::after{
+    content: ". . . .";
+    font-size: 20px;
+    
+}
+#after>div{
+    margin-bottom: -20px;
+    margin-left: 10px;
+    color: rgba(0, 0, 0, 0.37);
+    margin-top:5px;
+}
+#after{
+    margin-top:0px;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmallCase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif&family=Sen&display=swap" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ <link rel="stylesheet" href="index.css"/>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="./css/main.css"/>
+<link rel="stylesheet" href="./css/login.css"/>
+<link rel="stylesheet" href="./css/popup.css"/>
+
+<!-- footer -->
+<link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/36b5c9cc17.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" ></script>
+    <link rel="stylesheet" href="./css/footer.css"/>
+   
+</head>
+<body>
+    <div id="mainContainer">
+        <div id="header">
+
+        </div>
+        <div id="slide">
+        
+        </div>
+    
+     <div id="mdarif">           
+    
+    </div>
+    <div id="mainfooter"></div>
+</div>
+    
+    <div id="more" role="dialog"></div>
+
+    <div id="logincontain">
+        
+    </div>
+    <div id="checkBox">
+        <h1>Invest in ideas
+            with smallcases</h1>
+            <p>Build your diversified long-term portfolio of
+                stocks & ETFs</p>
+                <div>
+                    <button  id="loginbutton"  >Login with Broker</button>
+                    <button>Discover smallcases</button>
+                </div>
+                <p>Supported on India's largest brokers</p>
+                <div id="companylogo">
+                    <img src="https://assets.smallcase.com/smallcase/assets/brokerLogo/small/fivepaisa.svg"/>
+                    <img src="https://assets.smallcase.com/smallcase/assets/brokerLogo/small/angelbroking.svg"/>
+                    <img src=" https://assets.smallcase.com/smallcase/assets/brokerLogo/small/hdfc.svg"/>
+                    <img src="https://assets.smallcase.com/smallcase/assets/brokerLogo/small/kotak.svg"/>
+                    <img src="https://assets.smallcase.com/smallcase/assets/brokerLogo/small/upstox.svg"/>
+                    <img src="https://assets.smallcase.com/smallcase/assets/brokerLogo/small/kite.svg"/>
+
+                    <button>+8</button>
+                </div>
+                <div>
+                    <p>Don’t have a broker account?</p>
+                    <a id="checkbtn" href="signup.html">Open Broker Account</a>
+                </div>
+    </div>
+    <div id="popup"></div>
+    
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script  src="./scripts/footer.js"></script>
+<script type="module">
+
+
+import chhavi from "./scripts/chhavi.js";
+document.getElementById("mdarif").innerHTML=chhavi();
+
+
+
+let data = [
+    {"img":"https://www.smallcase.com/static/pngs/awi_landing/back.png",
+    "couple":"https://www.smallcase.com/static/pngs/awi_landing/couple.png"}
+, {"img":"https://www.smallcase.com/static/pngs/brand-value/back.png",
+"couple":"https://www.smallcase.com/static/pngs/brand-value/couple.png"
+     }
+]
+localStorage.setItem("imageData",JSON.stringify(data));
+
+let main=document.getElementById("header");
+
+import navbar from "./component/navbar.js";
+
+main.innerHTML=navbar();
+console.log(main);
+let slide=document.getElementById("slide")
+import append from "./scripts/index.js";
+append(data,slide);
+
+import extra from "./scripts/extra.js";
+let z= await extra();
+document.getElementById("more").innerHTML=z;
+document.getElementById("more").style.display="none";
+let y= document.getElementById("arrow");
+
+    y.addEventListener("click",function(){
+        event.preventDefault();
+    document.getElementById("more").style.display="table";
+});
+
+    let x= document.getElementById("more");
+   let  w=document.getElementById("btnclose");
+    console.log(w);
+    w.addEventListener("click",function(){
+       
+        x.style.display="none";
+              
+
+    })
+
+
+
+import login from "./scripts/login.js";
+
+let checkbox=document.getElementById("checkBox");
+let body=document.body;
+let slid=document.getElementById("slide");
+let logincont=document.getElementById("logincontain");
+logincont.innerHTML=login();
+logincont.style.display="none";
+
+let popup3=document.getElementById("popup");
+document.getElementById("loginA").addEventListener("click",function(){
+    event.preventDefault();
+    logincont.style.display="flex";
+    popup3.style.display="none";
+    
+    
+})
+
+document.getElementById("btnlogin").addEventListener("click",function(){
+    logincont.style.display="none";
+    document.body.style.backgroundColor="white";
+    popup3.style.display="block";
+    // body.style.backgroundColor="white";
+    // body.style.opacity="9"
+    // slid.style.display="flex";
+    
+
+})
+
+document.getElementById("loginbutton").addEventListener("click", function(){
+    logincont.style.display="flex";
+    
+    popup3.style.display="none";
+    // body.style.backgroundColor="black";
+    // body.style.opacity="0.8";
+    // logincont.style.opacity="100";
+    // slid.style.display="none";
+    
+})
+let obj1={};
+let arr1=[];
+function log(a,b,obj1,arr1){
+    obj1={
+        "Logo":`https://assets.smallcase.com/smallcase/assets/brokerLogo/small/${a}`,
+        "name":b
+    }
+    arr1.push(obj1);
+}
+let nameA=["Zerodha","Kotak","5paisa","Angel One","Groww","HDFC","ICICIdirect","Upstox"]
+let arr=["kotak.svg","fivepaisa.svg","angelbroking.svg","groww.svg","hdfc.svg","icici.svg","upstox.svg","kite.svg"]
+for(let i=0; i<arr.length; i++){
+log(arr[i],nameA[i],obj1,arr1);
+
+
+}
+
+//console.log(arr1);
+let parent=document.getElementById("logo");
+
+appendlogin(arr1,parent);
+console.log(parent);
+function appendlogin(arr1,parent){
+    console.log(arr1);
+     arr1.forEach((el)=>{
+        let div=document.createElement("div");
+    let img=document.createElement("img");
+    img.src=el.Logo;
+    img.style.width="30px";
+    let p=document.createElement("p");
+       p.innerText=el.name;
+       div.append(img,p);
+
+       parent.append(div);
+     })
+    let p1=document.createElement("p");
+    p1.innerText="+6";
+    let p2=document.createElement("p");
+    p2.innerText="More";
+    p2.style.marginTop="-10px";
+    let div1=document.createElement("div");
+    div1.append(p1,p2);
+    div1.style.color="blue";
+    parent.append(div1);
+}
+let popup=document.getElementById("popup");
+let bag=[{"popup1":popup1()},{"popup1":popup2()}];
+import {popup1,popup2} from "./scripts/popup.js";
+let j=1;
+let t1=setInterval(()=>{
+    
+    if(j==bag.length){
+        j=0;
+    }
+        popup.innerHTML=null;
+        popup.innerHTML=bag[j].popup1;
+        j++;
+},3000);
+
+// document.getElementById("invest").addEventListener("click",function(){
+//     event.preventDefault();
+//     logincont.style.display="flex";
+// })
+
+
+//footer import:
+
+import footer from "./scripts/footerhtml.js";
+let fott=document.getElementById("mainfooter");
+fott.innerHTML=footer();
+console.log(fott);
+</script>
+
+

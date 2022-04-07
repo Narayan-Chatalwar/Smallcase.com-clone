@@ -1,15 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
 * {
     margin: 0;
     padding: 0;
@@ -23,8 +12,8 @@
     gap: 20px;
     border: 1px solid rgb(225, 224, 224);
     background-color: #f9fafb;
-    margin-top: 500px;
-    padding-top: 56px;
+    margin-top: 100px;
+    padding-top: 30px;
     padding-bottom: 30px;
     font-family: Graphik Web Regular, sans-serif;
     color: gray;
@@ -515,6 +504,5 @@
 
 
 }
-
 
 
