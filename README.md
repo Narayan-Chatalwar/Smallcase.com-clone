@@ -67,6 +67,13 @@ when you click on the Subscribe button without giving input it will say please f
 
 and when you click on social buttons you will find the social accounts of small case.
 
+<img src="https://miro.medium.com/max/875/0*zE2SV_6-6yCDJnip.jpeg" alt="Alt text" title="Optional title">
 
 THANK YOU for your valuable time feel free to ask questions about the website and for your suggestions.
+
+
+
+
+
+...
 
