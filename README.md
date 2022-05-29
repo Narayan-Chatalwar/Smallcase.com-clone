@@ -53,7 +53,7 @@ This is the lower section of the landing page created by chhavi Srivastava. when
 <img src="https://miro.medium.com/max/875/0*byj_V3E0teTZzi5Z.jpeg" alt="Alt text" title="Optional title">
 
 <img src="https://miro.medium.com/max/875/0*TGfwpBD8JQHY27k9.jpeg" alt="Alt text" title="Optional title">
-we are also added your gmail access
+you can connect with us on gmail-
 
 
 <img src="https://miro.medium.com/max/875/0*zadx468P5YeLGedJ.jpeg" alt="Alt text" title="Optional title">
